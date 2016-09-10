@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\files\Bugheist-Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="e25af84adf3895e39323ea811a71155b9bec7148">
+        <dex dex="C:\files\Bugheist-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1e1f2b339a0fcb7781bd1aca3137d9c10526184d\classes.dex" />
+    </item>
+    <item
+        jar="C:\files\Bugheist-Android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="bd76fb8cfc5a2757bf0c0ebbf390e157f75f5c5f">
+        <dex dex="C:\files\Bugheist-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bc00b9ca607db3c96906c3abdef591f0b329536e\classes.dex" />
+    </item>
+
+</items>
