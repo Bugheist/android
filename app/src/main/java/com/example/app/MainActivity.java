@@ -1,6 +1,8 @@
 package com.example.app;
 
 import android.app.Activity;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -22,6 +24,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import java.util.List;
 import java.util.UUID;
 
 
@@ -60,6 +63,15 @@ public class MainActivity extends Activity {
 
                         mWebView.loadUrl("http://www.bugheist.com/?hash="+hashcode);
                     }else{
+                        final PackageManager pm = getPackageManager();
+//get a list of installed apps.
+                        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+
+                        for (ApplicationInfo packageInfo : packages) {
+                            Log.d("asdf", "Installed package :" + packageInfo.packageName);
+                            Log.d("asdf", "Source dir : " + packageInfo.sourceDir);
+                            Log.d("asdf", "Launch Activity :" + pm.getLaunchIntentForPackage(packageInfo.packageName));
+                        }
                         mWebView.loadUrl("http://www.bugheist.com");
                     }
                 }
