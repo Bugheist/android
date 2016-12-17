@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
                         UUID hashcode = UUID.randomUUID();
                         int response= uploadFile(cursor.getString(idx), hashcode);
 
-                        mWebView.loadUrl("http://www.bugheist.com/?hash="+hashcode);
+                        mWebView.loadUrl("https://www.bugheist.com/?hash="+hashcode);
                     }else{
                         final PackageManager pm = getPackageManager();
 //get a list of installed apps.
@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
                             Log.d("asdf", "Source dir : " + packageInfo.sourceDir);
                             Log.d("asdf", "Launch Activity :" + pm.getLaunchIntentForPackage(packageInfo.packageName));
                         }
-                        mWebView.loadUrl("http://www.bugheist.com");
+                        mWebView.loadUrl("https://www.bugheist.com");
                     }
                 }
                 catch (Exception e)
